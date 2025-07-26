@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('job')->nullable();
             $table->string('img')->nullable();
+            $table->text('description');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('CASCADE');
         });

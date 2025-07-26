@@ -53,7 +53,7 @@
 
                     <!-- Info Nama dan Pekerjaan -->
                     <div class="text-center md:text-left">
-                        <a href="{{route('detail.contact', $item->id)}}" class="text-lg font-semibold text-gray-800">
+                        <a href="#" class="text-lg font-semibold text-gray-800">
                             {{ $item->nama_kontak }}
                         </a>
                         <div class="text-sm text-gray-500">
@@ -92,6 +92,62 @@
 
         </div>
 
-         
+        <!-- Side Kanan -->
+        <div class="border-2 border-gray-300  d rounded-lg p-4 text-center">
+            <div class="flex flex-col items-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" width="100" height="100"
+                    alt="Profile Picture">
+            </div>
+
+            <h2 class="text-lg font-semibold text-gray-800 ">{{$detail->nama_kontak}}</h2>
+            <p class="text-sm text-gray-600">{{$detail->job}}</p>
+            <div>
+                <div class="sm:hidden">
+                    <label for="tabs" class="sr-only">Select </label>
+                    <select id="tabs"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option>Profile</option>
+                        <option>About</option>
+                    </select>
+                </div>
+                <ul
+                    class="hidden text-sm font-medium text-center text-gray-500 rounded-lg shadow-sm sm:flex dark:divide-gray-700 dark:text-gray-400">
+                    <li class="w-full focus-within:z-10">
+                        <a href="#"
+                            class="inline-block w-full p-4 text-gray-900 bg-gray-100 border-r border-gray-200  rounded-s-lg focus:ring-4 focus:ring-blue-300 active focus:outline-none "
+                            aria-current="page">Profile</a>
+                    </li>
+                    <li class="w-full focus-within:z-10">
+                        <a href="#"
+                            class="inline-block w-full p-4 bg-white border-s-0 border-gray-200  rounded-e-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-blue-300 ">About</a>
+                    </li>
+                </ul>
+                <div class="flex justify-between items-center text-left pt-2">
+                    <!-- Informasi Nomor Telepon -->
+                    <div>
+                        <div class="text-sm text-gray-500">Phone Number</div>
+                        <div class="text-base font-medium text-gray-800">{{$detail->no}}</div>
+                    </div>
+
+                    <!-- Tombol Call -->
+                    <button class="p-2 rounded-lg hover:bg-gray-100 transition bg-green-200 cursor-pointer">
+                        <img src="{{ asset('image/call.png') }}" alt="Call" class="w-5 h-5">
+                    </button>
+                </div>
+                <div class="flex justify-between items-center text-left pt-2">
+                    <!-- Informasi Nomor Telepon -->
+                    <div>
+                        <div class="text-sm text-gray-500">Email Address</div>
+                        <div class="text-base font-medium text-gray-800">{{$detail->email}}</div>
+                    </div>
+
+                    <!-- Tombol Call -->
+                    <button class="p-2 rounded-lg hover:bg-gray-100 transition bg-green-200 cursor-pointer">
+                        <img src="{{ asset('image/call.png') }}" alt="Call" class="w-5 h-5">
+                    </button>
+                </div>
+                 
+            </div>
+        </div>
     </div>
 @endsection
