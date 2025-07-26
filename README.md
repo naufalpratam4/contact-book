@@ -36,3 +36,4 @@ A simple Contact Book web application that allows users to manage (create, read,
    Run migrations: php artisan migrate
    Run the application: php artisan serve
 🖼️ Screenshots
+![Alt Text](image/Screenshot.png)
